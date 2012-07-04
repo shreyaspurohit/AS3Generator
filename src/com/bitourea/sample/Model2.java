@@ -5,7 +5,7 @@ import java.math.BigInteger;
 
 /**
  * 
- * @author Shreyas
+ * @author Shreyas Purohit
  * @as3.class name="Model3" generate="true" generate-bindable-metadata="true" generate-remote-class-metadata="true"
  */
 public class Model2 {

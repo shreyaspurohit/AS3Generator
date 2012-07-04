@@ -2,7 +2,7 @@ package com.bitourea.plugin.as3.util;
 /**
  * Constants used in As3Plugin.
  * 
- * @author Shreyas
+ * @author Shreyas Purohit
  *
  */
 public class As3PluginConstants {

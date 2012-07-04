@@ -61,7 +61,7 @@ import com.thoughtworks.qdox.model.JavaField;
  * If this too does not solve the problem contact me on my blog. Will add the feature and release the next version.
  * </p>
  * 
- * @author Shreyas
+ * @author Shreyas Purohit
  * @see http://sacrosanctblood.blogspot.com/
  * 
  *

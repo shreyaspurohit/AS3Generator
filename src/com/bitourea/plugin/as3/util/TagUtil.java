@@ -8,7 +8,7 @@ import com.thoughtworks.qdox.model.JavaField;
  * This class hold the logic to get the annotation data from the java files. This is called from the
  * velocity template engine while creating the output AS files.
  * 
- * @author Shreyas
+ * @author Shreyas Purohit
  *
  */
 public class TagUtil {

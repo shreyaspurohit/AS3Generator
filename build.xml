@@ -58,7 +58,7 @@
 	</target>
 	<target name="javadoc">
 	<javadoc
-	           destdir="docs/api"
+	           destdir="api"
 	           author="true"
 	           version="true"
 	           use="true"
@@ -72,7 +72,7 @@
 	    <doctitle><![CDATA[<h1>AS3 Code Generator</h1>]]></doctitle>
 	    <bottom><![CDATA[<i>Copyleft &#169; 2008 SacrosanctBlood. All Rights Given.</i>]]></bottom>
 	    <tag name="todo" scope="all" description="To do:"/>
-	    <group title="AS3 Plugin Packages" packages="com.ssb.plugin.*"/>
+	    <group title="AS3 Plugin Packages" packages="com.bitourea.plugin.*"/>
 	    <group title="AS3 Sample Package" packages="com.bitourea.sample.*"/>
 	    <link offline="true" href="http://java.sun.com/j2se/1.5.0/docs/api/" packagelistLoc="C:\tmp"/>
 	    <link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
