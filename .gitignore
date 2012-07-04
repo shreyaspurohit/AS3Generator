@@ -1,0 +1,7 @@
+*.log
+*.as
+/bin
+.classpath
+.project
+.cache
+.history

@@ -1,0 +1,45 @@
+#**
+This template is used to generate the AS3 file for a Java model class.
+To generate the file with neat formatting the indentation has been removed and adjusted 
+to generate the required output.
+
+@author Shreyas. S. Purohit
+@version 2.0
+*#
+// ${dontedit} $plugin.initializeForNewFile()
+#set( $class = $metadata )
+#set( $truevalue = "true")
+package $plugin.getDestinationPackage($class);
+{
+#foreach($field in $class.getFields())#set($import = $plugin.shouldImport($field))#if($import != "false")
+	import $import;
+#end#end
+#if($tagUtil.isGenerateBindableMetadata($class) == $truevalue)
+    [Bindable]
+#end
+#if($tagUtil.isGenerateRemoteClassMetaData($class) == $truevalue)
+    [RemoteClass(alias="${plugin.getDestinationPackage($class)}.${tagUtil.getAs3Name($class)}")]
+#end	
+	public class $tagUtil.getAs3Name($class)
+	{
+#foreach($field in $class.getFields())#if($tagUtil.shouldFieldBeGenerated($field) == $truevalue)#set( $typeName = $tagUtil.getTypeName($field))#if($tagUtil.isImport($field) == $truevalue)
+#if($tagUtil.isGenerateBindableFieldMetadata($field) == $truevalue)
+		[Bindable]
+#end
+		public var $field.getName():$tagUtil.getClassNameForTypeName($typeName);
+#else#if($typeName)
+#if($tagUtil.isGenerateBindableFieldMetadata($field) == $truevalue)
+		[Bindable]
+#end
+		public var $field.getName():$typeName;
+#else
+#if($tagUtil.isGenerateBindableFieldMetadata($field) == $truevalue)
+		[Bindable]
+#end
+		public var $field.getName():$plugin.getDefaultType($field);
+#end
+#end
+#end
+#end
+	}
+}

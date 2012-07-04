@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Test AS3 Plugin Jar" default="main">
+
+	<property file="build.properties"/>
+	
+	<path id="xdoclet.task.classpath">
+		<!-- xdoclet2 runtime dependencies -->
+
+		  <fileset dir="${xdoclet.plugin.install.dir}/lib">
+		    <include name="**/*.jar"/>
+		  </fileset>
+		
+		<pathelement location="${basedir}/lib/as3-plugin.jar"/>
+
+	</path>
+
+	<!-- Define xdoclet task -->
+	 <taskdef
+	    name="xdoclet" classname="org.xdoclet.ant.XDocletTask"
+	     classpathref="xdoclet.task.classpath"
+	 />
+	
+	<target name="main" depends="generate"/>
+	
+	
+	<target name="generate">
+		<xdoclet>
+		<fileset dir="${basedir}/src">
+		     <include name="**/*.java"/>	       
+		 </fileset> 
+		<component classname="com.ssb.plugin.as3.As3Plugin"
+				   destdir="${basedir}/src"/>
+		</xdoclet>
+     </target>
+	 
+</project>

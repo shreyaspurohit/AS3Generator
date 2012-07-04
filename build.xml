@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Generate AS3 Plugin Jar" default="main">
+
+	<property file="build.properties"/>
+	
+	<path id="xdoclet.task.classpath">
+		<!-- xdoclet2 runtime dependencies -->
+
+		  <fileset dir="${xdoclet.plugin.install.dir}/lib">
+		    <include name="**/*.jar"/>
+		  </fileset>
+
+	</path>
+
+	<!-- Define xdoclet task -->
+	 <taskdef
+	    name="xdoclet" classname="org.xdoclet.ant.XDocletTask"
+	     classpathref="xdoclet.task.classpath"
+	 />
+	
+	<target name="main" depends="gen.qtags.impl,jar"/>
+	
+	<target name="gen.qtags.impl">
+	  <property name="xdoclet.qtags.namespace" value="as3"/>
+
+	  <xdoclet>
+		   <fileset dir="src">
+		     <include name="**/*.java"/>
+		   </fileset>
+		   <component
+		      classname="org.xdoclet.plugin.qtags.impl.QTagImplPlugin"
+		      destdir="${basedir}/src"
+		   />    
+		   <component
+		    classname="org.xdoclet.plugin.qtags.impl.QTagLibraryPlugin"
+		        destdir="${basedir}/src"
+		        packagereplace="com.ssb.plugin.${xdoclet.qtags.namespace}.qtags"
+		   />
+	  </xdoclet>
+	 </target>
+	<target name="compile">
+		<mkdir dir="target"/>
+	    <javac srcdir="${basedir}/src" destdir="${basedir}/target" classpathref="xdoclet.task.classpath"/>
+     </target>
+	<target name="resources">
+		<copy todir="${basedir}/target">
+			<fileset dir="${basedir}/src"
+				    	             excludes="**/*.java"
+				    	    />
+		</copy>
+	 </target>
+	<target name="jar" depends="compile,resources">
+	    <jar destfile="${basedir}/as3-plugin.jar">
+	    	<fileset dir="${basedir}/target"
+	    	             excludes="**/Test.class"
+	    	    />
+	    </jar>
+	</target>
+	<target name="javadoc">
+	<javadoc
+	           destdir="docs/api"
+	           author="true"
+	           version="true"
+	           use="true"
+	           windowtitle="Test API">
+
+	    <packageset dir="src" defaultexcludes="yes">
+	      <include name="com/ssb/plugin/**"/>
+	      <include name="com/ssb/sample/**"/>
+	    </packageset>
+
+	    <doctitle><![CDATA[<h1>AS3 Code Generator</h1>]]></doctitle>
+	    <bottom><![CDATA[<i>Copyleft &#169; 2008 SacrosanctBlood. All Rights Given.</i>]]></bottom>
+	    <tag name="todo" scope="all" description="To do:"/>
+	    <group title="AS3 Plugin Packages" packages="com.ssb.plugin.*"/>
+	    <group title="AS3 Sample Package" packages="com.ssb.sample.*"/>
+	    <link offline="true" href="http://java.sun.com/j2se/1.5.0/docs/api/" packagelistLoc="C:\tmp"/>
+	    <link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
+	 </javadoc>
+	 </target>
+</project>
