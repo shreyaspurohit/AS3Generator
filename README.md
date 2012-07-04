@@ -5,7 +5,7 @@ This project generates the as3 (Flex) files for the java files.
 
 Annotations
 -----------
-1. as3.class - A class level tag.
+### as3.class - A class level tag.
 
 Attributes:
 	* name - The name of the generated AS class. Should be same as the java class name. Required.
@@ -13,7 +13,7 @@ Attributes:
 	* generate-bindable-metadata - Generates [Bindable] at class level in AS. Default value: true.
 	* generate-remote-class-metadata - Generates [RemoteClass(alias="..")] on true. Default value: false.
 
-2. as3.field - A Field level tag.
+### as3.field - A Field level tag.
 
 Attributes:
 
