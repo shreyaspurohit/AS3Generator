@@ -34,7 +34,7 @@
 		   <component
 		    classname="org.xdoclet.plugin.qtags.impl.QTagLibraryPlugin"
 		        destdir="${basedir}/src"
-		        packagereplace="com.ssb.plugin.${xdoclet.qtags.namespace}.qtags"
+		        packagereplace="com.bitourea.plugin.${xdoclet.qtags.namespace}.qtags"
 		   />
 	  </xdoclet>
 	 </target>
@@ -65,15 +65,15 @@
 	           windowtitle="Test API">
 
 	    <packageset dir="src" defaultexcludes="yes">
-	      <include name="com/ssb/plugin/**"/>
-	      <include name="com/ssb/sample/**"/>
+	      <include name="com/bitourea/plugin/**"/>
+	      <include name="com/bitourea/sample/**"/>
 	    </packageset>
 
 	    <doctitle><![CDATA[<h1>AS3 Code Generator</h1>]]></doctitle>
 	    <bottom><![CDATA[<i>Copyleft &#169; 2008 SacrosanctBlood. All Rights Given.</i>]]></bottom>
 	    <tag name="todo" scope="all" description="To do:"/>
 	    <group title="AS3 Plugin Packages" packages="com.ssb.plugin.*"/>
-	    <group title="AS3 Sample Package" packages="com.ssb.sample.*"/>
+	    <group title="AS3 Sample Package" packages="com.bitourea.sample.*"/>
 	    <link offline="true" href="http://java.sun.com/j2se/1.5.0/docs/api/" packagelistLoc="C:\tmp"/>
 	    <link href="http://developer.java.sun.com/developer/products/xml/docs/api/"/>
 	 </javadoc>

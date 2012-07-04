@@ -1,4 +1,4 @@
-package com.ssb.plugin.as3.qtags;
+package com.bitourea.plugin.as3.qtags;
 
 import com.thoughtworks.qdox.model.DocletTag;
 

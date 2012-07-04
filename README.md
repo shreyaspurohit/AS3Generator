@@ -52,7 +52,7 @@ Write a ant build script and invoke xdoclet with target:
 	        <fileset dir="${basedir}/src">
 	             <include name="**/*.java"/>          
 	         </fileset>
-	        <component classname="com.ssb.plugin.as3.As3Plugin"
+	        <component classname="com.bitourea.plugin.as3.As3Plugin"
 	                   destdir="${basedir}/src"/>
 	        </xdoclet>
 	</target>

@@ -1,6 +1,6 @@
-package com.ssb.plugin.as3.qtags;
+package com.bitourea.plugin.as3.qtags;
 
-public class As3FieldTagImpl extends org.xdoclet.XDocletTag implements com.ssb.plugin.as3.qtags.As3FieldTag {
+public class As3FieldTagImpl extends org.xdoclet.XDocletTag implements com.bitourea.plugin.as3.qtags.As3FieldTag {
     public static final String NAME = "as3.field";
     private static final java.util.List ALLOWED_PARAMETERS = java.util.Arrays.asList( new String[] {
 		"type",

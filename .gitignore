@@ -1,6 +1,7 @@
 *.log
 *.as
 /bin
+/target
 .classpath
 .project
 .cache

@@ -1,6 +1,6 @@
-package com.ssb.plugin.as3.qtags;
+package com.bitourea.plugin.as3.qtags;
 
-public class As3ClassTagImpl extends org.xdoclet.XDocletTag implements com.ssb.plugin.as3.qtags.As3ClassTag {
+public class As3ClassTagImpl extends org.xdoclet.XDocletTag implements com.bitourea.plugin.as3.qtags.As3ClassTag {
     public static final String NAME = "as3.class";
     private static final java.util.List ALLOWED_PARAMETERS = java.util.Arrays.asList( new String[] {
 		"name",

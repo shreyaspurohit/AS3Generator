@@ -1,4 +1,4 @@
-package com.ssb.plugin.as3.util;
+package com.bitourea.plugin.as3.util;
 /**
  * Constants used in As3Plugin.
  * 

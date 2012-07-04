@@ -1,4 +1,4 @@
-package com.ssb.plugin.as3.util;
+package com.bitourea.plugin.as3.util;
 
 import org.apache.log4j.Logger;
 
@@ -15,7 +15,7 @@ public class TagUtil {
 	/**
 	 * Logger.
 	 */
-	private final Logger logger = Logger.getLogger("com.ssb.plugin.as3.util.TagUtil");
+	private final Logger logger = Logger.getLogger("com.bitourea.plugin.as3.util.TagUtil");
 	/**
 	 * Gets the As3 Class name from the annotation as3.class, attribute 'name'
 	 * 

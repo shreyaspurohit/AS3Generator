@@ -1,4 +1,4 @@
-package com.ssb.sample;
+package com.bitourea.sample;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -13,8 +13,8 @@ public class Model {
 	private int i;
 	private double d;
 	private long l;
-	private com.ssb.sample.model.Model3 model3;
-	private com.ssb.sample.Model2 model2;
+	private com.bitourea.sample.model.Model3 model3;
+	private com.bitourea.sample.Model2 model2;
 	
 	/**
 	 * @as3.field type="Number" import="false" generate-bindable-field-metadata="true"
@@ -71,11 +71,11 @@ public class Model {
 		this.binteger = binteger;
 	}
 
-	public com.ssb.sample.model.Model3 getModel() {
+	public com.bitourea.sample.model.Model3 getModel() {
 		return model3;
 	}
 
-	public void setModel(com.ssb.sample.model.Model3 model3) {
+	public void setModel(com.bitourea.sample.model.Model3 model3) {
 		this.model3 = model3;
 	}
 
@@ -87,11 +87,11 @@ public class Model {
 		this.doNotGeneratebinteger = doNotGeneratebinteger;
 	}
 
-	public com.ssb.sample.Model2 getModel2() {
+	public com.bitourea.sample.Model2 getModel2() {
 		return model2;
 	}
 
-	public void setModel2(com.ssb.sample.Model2 model2) {
+	public void setModel2(com.bitourea.sample.Model2 model2) {
 		this.model2 = model2;
 	}
 	

@@ -1,4 +1,4 @@
-package com.ssb.plugin.as3;
+package com.bitourea.plugin.as3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -11,9 +11,9 @@ import org.generama.VelocityTemplateEngine;
 import org.generama.WriterMapper;
 import org.generama.defaults.QDoxPlugin;
 
-import com.ssb.plugin.as3.qtags.TagLibrary;
-import com.ssb.plugin.as3.util.As3PluginConstants;
-import com.ssb.plugin.as3.util.TagUtil;
+import com.bitourea.plugin.as3.qtags.TagLibrary;
+import com.bitourea.plugin.as3.util.As3PluginConstants;
+import com.bitourea.plugin.as3.util.TagUtil;
 import com.thoughtworks.qdox.model.JavaClass;
 import com.thoughtworks.qdox.model.JavaField;
 /**
@@ -75,7 +75,7 @@ public class As3Plugin extends QDoxPlugin{
 	/**
 	 * Logger.
 	 */
-	private final Logger logger = Logger.getLogger("com.ssb.plugin.as3.As3Plugin");
+	private final Logger logger = Logger.getLogger("com.bitourea.plugin.as3.As3Plugin");
 	/**
 	 * List to keep track of imports.
 	 */
