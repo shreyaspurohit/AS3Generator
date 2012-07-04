@@ -8,19 +8,20 @@ Annotations
 ### as3.class - A class level tag.
 
 Attributes:
-	* name - The name of the generated AS class. Should be same as the java class name. Required.
-	* generate - On false, does not generate the AS file for the java class. Default: true.
-	* generate-bindable-metadata - Generates [Bindable] at class level in AS. Default value: true.
-	* generate-remote-class-metadata - Generates [RemoteClass(alias="..")] on true. Default value: false.
+
+* name - The name of the generated AS class. Should be same as the java class name. Required.
+* generate - On false, does not generate the AS file for the java class. Default: true.
+* generate-bindable-metadata - Generates [Bindable] at class level in AS. Default value: true.
+* generate-remote-class-metadata - Generates [RemoteClass(alias="..")] on true. Default value: false.
 
 ### as3.field - A Field level tag.
 
 Attributes:
 
-	* type - The fully qualified flex type to be generated in the AS file. Required.
-	* import - Imports the flex type defined above. Default: false.
-	* generate-bindable-field-metadata - Generate field level [Bindable] in the AS file. Default: false.
-	* generate - Controls generation of the field in as files. Default: true.
+* type - The fully qualified flex type to be generated in the AS file. Required.
+* import - Imports the flex type defined above. Default: false.
+* generate-bindable-field-metadata - Generate field level [Bindable] in the AS file. Default: false.
+* generate - Controls generation of the field in as files. Default: true.
 
 Java-Flex mapping
 -----------------
